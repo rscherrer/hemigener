@@ -9,7 +9,7 @@ allfreq 0.5
 recombination 1
 tend 1000
 tsave 100
-seed 1671744430596167989
+seed 1671745771535843248
 loadarch 0
 savepars 1
 savelog 0

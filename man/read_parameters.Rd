@@ -20,7 +20,7 @@ The function looks for the file "paramlog.txt" in the simulation folder
 }
 \examples{
 
-root <- system.file("extdata", "sim-example", package = "brachypoder")
+root <- system.file("extdata", "sim-example", package = "hemigener")
 read_parameters(root)
 
 }

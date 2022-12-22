@@ -20,7 +20,7 @@ Read a binary file
 }
 \examples{
 
-root <- system.file("extdata", "sim-example", package = "brachypoder")
+root <- system.file("extdata", "sim-example", package = "hemigener")
 read_binary(paste0(root, "/time.dat"))
 
 }

@@ -32,7 +32,7 @@ Do not provide the extension of the data files in \code{variables} (".dat").
 }
 \examples{
 
-root <- system.file("extdata", "sim-example", package = "brachypoder")
+root <- system.file("extdata", "sim-example", package = "hemigener")
 read_data(root, "time")
 read_data(root, c("time", "popsize"))
 

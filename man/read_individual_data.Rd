@@ -15,12 +15,12 @@ A tibble
 \description{
 This function is a wrapper around \code{read_data} tailored at reading the
 output file "individuals.dat" into a tibble with one row per individual and
-individual attributes (e.g. deme, patch and traits) in columns, properly
+individual attributes (e.g. traits) in columns, properly
 renamed.
 }
 \examples{
 
-root <- system.file("extdata", "sim-example", package = "brachypoder")
+root <- system.file("extdata", "sim-example", package = "hemigener")
 read_individual_data(root)
 
 }

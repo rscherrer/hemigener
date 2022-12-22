@@ -26,19 +26,12 @@ read_individual_data <- function(root) {
   # Read time points
   timepoints <- read_binary(paste0(root, "/time.dat"))
 
-  # Read population sizes at each time point
-  popsizes <- read_binary(paste0(root, "/popsize.dat"))
+  # Read population size
+  popsize <- read_parameters(root)$popsize
 
-  # Add a time column at the beginning
-  data$time <- purrr::reduce(purrr::map2(timepoints, popsizes, rep), c)
-  data <- data[, c(ncol(data), seq(ncol(data) - 1))]
-
-  # Rename the columns
-  names(data) <- c("time", "x")
-
-  # Increment the deme index
-  data$deme <- data$deme + 1
-
-  return(data)
+  tibble::tibble(
+    time = rep(timepoints, each = popsize),
+    x = data[[1]]
+  )
 
 }
